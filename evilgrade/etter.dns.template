@@ -1,0 +1,5 @@
+update.speedbit.com A IP
+
+#Put here the domain to spoof (see in Evilgrade) with the following format: DNS A IP.
+#E.g google.com A IP 
+#CROZONO replaces "IP" automatically. Its a template.
